@@ -1,0 +1,41 @@
+<div class="container  m-auto">
+  <br>
+  <h3>Otros</h3>
+  <%= render "hora"%>
+  <br>
+  <div class="row border-colored rounded">
+    <div class="col-sm bg_explicacion p-3 rounded border-right">
+      <strong>ic-trigger-on</strong> es una función de Intercooler.js que permite enviar una petición HTTP a un servidor en respuesta a un evento en la página web, y actualizar una sección específica de la página con la respuesta del servidor. Esta función es útil cuando se desea actualizar dinámicamente una parte de la página web en respuesta a un evento específico, como hacer clic en un botón o ingresar texto en un campo de entrada.  Funciona con los eventos de JQuery http://api.jquery.com/category/events/  </div>
+    <div class="col-lg" style="align-self: center">
+      <div id="example-trigger" class="text-center">
+        <a ic-get-from="/ejemplo" class="btn btn-happyhues" ic-trigger-on="mouseenter" ic-target="#example-trigger"><strong>Mostrar contenido al pasar el mouse</strong></a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row border-colored rounded">
+    <div class="col-sm bg_explicacion p-3 rounded border-right">
+      <strong>ic-target</strong> es una función de Intercooler.js que permite especificar en qué parte de la página se mostrará la respuesta de una petición HTTP realizada con Intercooler. Esta función es útil cuando se desea actualizar una sección específica de la página web con la respuesta del servidor, sin tener que cargar toda la página.
+    </div>
+    <div class="col-lg d-flex justify-content-around pt-2" style="align-self: center">
+      <div class="text-center">
+        <a ic-get-from="/ejemplo" class="btn btn-happyhues" ic-target="#example-target"><strong>Mostrar</strong></a>
+      </div>
+      <div  id="example-target" class= "border p-2 m-1">
+        Yo soy el target
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row border-colored rounded">
+    <div class="col-sm bg_explicacion p-3 rounded border-right">
+      <strong>ic-poll</strong> es una función de Intercooler.js que permite realizar peticiones HTTP de forma periódica para actualizar dinámicamente una sección específica de la página web. Esta función es útil cuando se desea mostrar información en tiempo real sin tener que recargar toda la página.
+    </div>
+    <div class="col-lg d-flex justify-content-center" style="align-self: center">
+       <span ic-poll="2s" ic-src="/hora"">
+            Vamos a consultar cada 2 segundos...
+        </span>
+    </div>
+  </div>
+  <br>
+</div>

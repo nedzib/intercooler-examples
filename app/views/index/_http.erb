@@ -1,0 +1,88 @@
+<div class="container m-auto">
+  <br>
+  <h3>HTTP Request</h3>
+  <%= render "hora"%>
+  <br>
+  <div class="row border-colored rounded">
+    <div class="col-sm bg_explicacion p-3 rounded border-right">
+      <strong>ic-get-from</strong> es una función de Intercooler.js que permite obtener datos de un servidor y actualizar una sección específica de la página web. La función ic-get-from realiza una petición HTTP GET al servidor y recibe una respuesta en formato HTML o JSON, que se utiliza para actualizar el contenido de un elemento específico en la página.
+    </div>
+    <div class="col-lg" style="align-self: center">
+      <div class="text-center">
+        <a ic-get-from="https://jsonplaceholder.typicode.com/users/1/posts/?id=1" class="mt-3 btn btn-happyhues" ic-target="#example-get"><strong>Mostrar posts</strong></a>
+        <div id="example-get" class="my-3 overflow-auto mh-20">
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row border-colored rounded">
+    <div class="col-sm bg_explicacion p-3 rounded border-right">
+      <strong>ic-post-to</strong> es una función de Intercooler.js que permite enviar datos a un servidor y actualizar una sección específica de la página web. La función ic-post-to realiza una petición HTTP POST al servidor y recibe una respuesta en formato HTML o JSON, que se utiliza para actualizar el contenido de un elemento específico en la página.
+    </div>
+    <div class="col-lg">
+      <form ic-post-to="https://jsonplaceholder.typicode.com/posts" ic-target="#example-post" class="m-3">
+        <div class="form-group">
+          <input name="title" type="text" class="form-control" placeholder="Ingresar titulo" required>
+        </div>
+        <div class="form-group">
+          <input name="body" type="text" class="form-control my-1" placeholder="Ingresar contenido" required>
+        </div>
+        <div class="form-group">
+          <input name="userId" type="numeric" class="form-control" placeholder="Ingresar id usuario" value= 1 required>
+        </div>
+        <button id="form-button-1" type="submit" class="mt-3 btn btn-happyhues">Enviar</button>
+      </form>
+      <div id="example-post" class="my-3">
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row border-colored rounded">
+    <div class="col-sm bg_explicacion p-3 rounded border-right">
+      <strong>ic-put-to</strong> es una función de Intercooler.js que permite actualizar datos en el servidor y actualizar una sección específica de la página web. La función ic-put-to realiza una petición HTTP PUT al servidor y recibe una respuesta en formato HTML o JSON, que se utiliza para actualizar el contenido de un elemento específico en la página.    </div>
+    <div class="col-lg">
+      <form ic-put-to="https://jsonplaceholder.typicode.com/posts/1" ic-target="#example-put" class="m-3">
+        <div class="form-group">
+          <input name="title" type="text" class="form-control" placeholder="Ingresar titulo" required>
+        </div>
+        <div class="form-group">
+          <input name="body" type="text" class="form-control my-1" placeholder="Ingresar contenido" required>
+        </div>
+        <div class="form-group">
+          <input name="userId" type="numeric" class="form-control" placeholder="Ingresar id usuario" value= 1 required>
+        </div>
+        <button id="form-button-1" type="submit" class="mt-3 btn btn-happyhues">Enviar</button>
+      </form>
+      <div id="example-put" class="my-3">
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row border-colored rounded">
+    <div class="col-sm bg_explicacion p-3 rounded border-right">
+      <strong>ic-patch-to</strong> es una función de Intercooler.js que permite actualizar parcialmente datos en el servidor y actualizar una sección específica de la página web. La función ic-patch-to realiza una petición HTTP PATCH al servidor y recibe una respuesta en formato HTML o JSON, que se utiliza para actualizar el contenido de un elemento específico en la página.    </div>
+    <div class="col-lg">
+      <form ic-patch-to="https://jsonplaceholder.typicode.com/posts/1" ic-target="#example-patch" class="m-3">
+        <div class="form-group">
+          <input name="title" type="text" class="form-control" placeholder="Ingresar titulo" required>
+        </div>
+        <button id="form-button-1" type="submit" class="mt-3 btn btn-happyhues">Enviar</button>
+      </form>
+      <div id="example-patch" class="my-3">
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row border-colored rounded">
+    <div class="col-sm bg_explicacion p-3 rounded border-right">
+      <strong>ic-delete-from</strong> es una función de Intercooler.js que permite realizar una petición HTTP DELETE al servidor y actualizar una sección específica de la página web con la respuesta del servidor. Esta función es útil cuando se desea eliminar un recurso en el servidor y actualizar solo la parte de la página que muestra dicho recurso.
+    </div>
+    <div class="col-lg text-center" style="align-self: center">
+      <a ic-delete-from="https://jsonplaceholder.typicode.com/posts/1" class="mt-3 btn btn-happyhues" ic-target="#example-delete"><strong>Eliminar Post</strong></a>
+      <div id="example-delete" class="my-3 overflow-auto mh-20">
+      </div>
+    </div>
+  </div>
+  <br>
+</div>

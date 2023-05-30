@@ -1,0 +1,8 @@
+<nav class="navbar d-flex justify-content-around position-sticky sticky-top" style="background-color: #121629; color: #fffffe;">
+  <%= "Intercooler.js - " + Time.zone.now.strftime("%I:%M:%S %p") %>
+  <div>
+    <span role="button" class="badge badge-pill badge-secondary" ic-get-from="/inicio" ic-target="#container">Inicio</span>
+    <span role="button" class="badge badge-pill badge-secondary" ic-get-from="/http" ic-target="#container">HTTP Request</span>
+    <span role="button" class="badge badge-pill badge-secondary" ic-get-from="/others" ic-target="#container">Otros</span>
+  </div>
+</nav>
