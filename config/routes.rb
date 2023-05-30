@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :books
   get "ejemplo" => "index#ejemplo"
   get "http" => "index#http"
   get "inicio" => "index#inicio"
